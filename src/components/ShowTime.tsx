@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const ShowTime: React.FC = () => {
   const [time, setTime] = useState(new Date());
@@ -6,7 +6,7 @@ const ShowTime: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(new Date());
-    }, 20000);
+    }, 2000);
 
     return () => clearInterval(timer);
   }, []);
